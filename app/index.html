@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+    <div class="menu__nav">
+        <ul>
+            <li><a href="#infotmacia">Личная информация</a></li>
+            <li><a href="#opit">Опыт</a></li>
+            <li><a href="#js">JavaScript</a></li>
+            <li><a href="#osebe">О себе</a></li>
+        </ul>
+    </div>
+    <div class="anketa">
+        <div class="anketa__title">
+            Анкета
+        </div>
+        <div class="caption">
+            <a name="infotmacia"></a>
+            <div class="caption__inner caption__inner-infoimg">
+                Личная информация
+            </div>
+            
+            <div class="form">
+                <div class="form-item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">ФИО</label>
+                </div>
+
+                <form>
+                    <div class="__select" data-state="">
+                        <div class="__select__title" data-default="Option 0">Год рождения</div>
+                        <div class="__select__content deactivate" id="year">
+
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">Место проживания</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">Skype</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">E-mail</label>
+                </div>
+
+
+
+            </div>
+            <a name="opit"></a>
+            <div class="caption__inner caption__inner-expimg">
+                Расскажите о своем опыте
+            </div>
+            <div class="check__inner">
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp1" type="checkbox">
+                    <label class="label-before" for="checkexp1">БЭМ/OOCSS</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp2" type="checkbox">
+                    <label class="label-before" for="checkexp2">Верстаю семантично</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp3" type="checkbox">
+                    <label class="label-before" for="checkexp3">Webpack</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp4" type="checkbox">
+                    <label class="label-before" for="checkexp4">Stylus/LESS/SASS</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp5" type="checkbox">
+                    <label class="label-before" for="checkexp5">ES2015/ES2016</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp6" type="checkbox">
+                    <label class="label-before" for="checkexp6">jQuery</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp7" type="checkbox">
+                    <label class="label-before" for="checkexp7">Работаю с SVG</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp8" type="checkbox">
+                    <label class="label-before" for="checkexp8">Gulp/GRUNT</label>
+                </div>
+                <div class="checkboxexp">
+                    <input class="checkboxexpi" id="checkexp9" type="checkbox">
+                    <label class="label-before" for="checkexp9">Ипользую Git</label>
+                </div>
+            </div>
+            <a name="js"></a>
+            <div class="caption__inner caption__inner-jsimg">
+                Уровень владения JavaScript
+            </div>
+
+            <div class="experience">
+                <div class="labels">
+                    <div>Не владею</div>
+                    <div>Использую готовые<br>решения</div>
+                    <div>Использую готовые решения<br>и умею и переделывать</div>
+                    <div>Пишу сложный JS с нуля</div>
+                </div>
+                <div class="progress"></div>
+                <input type="range" step="1" min="0" max="4" value="2"
+                    oninput="this.step = (this.value >= 2) ? 2 : 1; this.parentElement.style.setProperty('--level', this.value);">
+            </div>
+            <a name="osebe"></a>
+            <div class="caption__inner caption__inner-aboutimg">
+                Расскажите о себе
+            </div>
+            <div class="vac-about__inner">
+                Напишите несколько предложений, чем привлекла наша вакансия
+                и что вы ожидаете от работы у нас.
+            </div>
+            <div class="textarea__div">
+                <textarea name="comment" cols="40" rows="3" placeholder="Понравилась тем, что..."></textarea>
+            </div>
+            <form class="knopochka" action="">
+                <button class="knopka">Готово</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
